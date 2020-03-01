@@ -10,7 +10,7 @@ Automatic updates for Ubuntu. Simply install using the command below and never t
 
 Copy the below into a terminal and run it to install the 'needrestart' package, the update script, and the associated cron job:
 ```
-sudo apt-get install -y needrestart && sudo curl https://github.com/snw35/auto-update/blob/master/ubuntu/update-cron.sh -o /usr/local/bin/update-cron.sh && sudo chmod +x /usr/local/bin/update-cron.sh && sudo curl https://github.com/snw35/auto-update/blob/master/ubuntu/update-reboot -o /etc/cron.d/update-reboot;
+sudo apt-get install -y needrestart && sudo curl https://raw.githubusercontent.com/snw35/auto-update/master/ubuntu/update-cron.sh -o /usr/local/bin/update-cron.sh && sudo chmod +x /usr/local/bin/update-cron.sh && sudo curl https://raw.githubusercontent.com/snw35/auto-update/master/ubuntu/update-reboot -o /etc/cron.d/update-reboot;
 ```
 
 Try it out by running the script manually, e.g. run `/usr/local/bin/update-cron.sh` in a terminal. It will wait for 2 minutes before going ahead and automatically updating your system. If it works correctly then you're all set.
