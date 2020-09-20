@@ -17,6 +17,15 @@ Try it out by running the script manually, e.g. run `/usr/local/bin/update-cron.
 
 If a new Kernel is installed, the script will pop up a notification titled "Auto-Updater" that reads "New kernel installed, reboot required". You can either reboot sooner, or just carry on as normal.
 
+## Fedora
+
+Automatic updates for Fedora. Runs `dnf update -y` 2 minutes after login, because why click buttons or type it yourself?
+
+Copy the below into a terminal and run it to install:
+```
+sudo curl https://raw.githubusercontent.com/snw35/auto-update/master/fedora/update-cron.sh -o /usr/local/bin/update-cron.sh && sudo chmod +x /usr/local/bin/update-cron.sh && sudo curl https://raw.githubusercontent.com/snw35/auto-update/master/fedora/update-reboot -o /etc/cron.d/update-reboot;
+```
+
 ## Considerations
 
 Your machine will initiate a potentially large download 2 minutes after login. If you are on a metered connection, e.g tethered to your phone, be aware of the potential data use.
